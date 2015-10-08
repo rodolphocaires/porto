@@ -1,0 +1,14 @@
+<ion-view view-title="Sinistros">
+	<ion-nav-buttons side="secondary">
+		<button class="button button-clear button-positive" ng-click="novoSinistroModal.show()">Novo</button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-item ng-repeat="sinistro in sinistros" href="#/app/sinistro/{{sinistro.id}}">
+			<small>Apólice: {{sinistro.apolice.id}}</small>
+			<br/>
+			<small>Ocorrência: {{sinistro.ocorrencia.nome}}</small>
+			<br/>
+			<small>{{sinistro.status.nome}}</small>
+		</ion-item>
+	</ion-content>
+</ion-view>
