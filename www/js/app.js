@@ -60,7 +60,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		}
 	})
 	.state('app.map', {
-		url: '/map',
+		url: '/map/:query',
 		views: {
 			'menuContent': {
 				templateUrl: 'templates/map.html',
