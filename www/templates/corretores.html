@@ -1,0 +1,14 @@
+<ion-view view-title="Corretores">
+	<ion-content>
+		<ion-item ng-repeat="corretor in corretores" href="#/app/corretor/{{corretor.id}}">
+			<h2>{{corretor.nome}}</h2>
+			<br/>
+			<!-- Aqui o interessante é informar resumidamente e não todos os detalhes da apólice, deixar isto para quando o
+			usuário selecionar a apólice -->
+			<small>{{corretor.email}}</small>
+			<ul ng-repeat="telefone in corretor.telefones">
+				<li>{{telefone.numero}}</li>
+			</ul>
+		</ion-item>
+	</ion-content>
+</ion-view>

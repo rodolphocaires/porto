@@ -41,12 +41,57 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			}
 		}
 	})
+	.state('app.apolices-sinistro', {
+		url: '/apolices',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/apolices-sinistro.html',
+				controller: 'ApoliceCtrl'
+			}
+		}
+	})
+	.state('app.detalhe-apolice', {
+		url: '/apolice/:apoliceId',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/detalhe-apolice.html',
+				controller: 'ApoliceCtrl'
+			}
+		}
+	})
 	.state('app.sinistros', {
 		url: '/sinistros',
 		views: {
 			'menuContent': {
 				templateUrl: 'templates/sinistros.html',
 				controller: 'SinistrosCtrl'
+			}
+		}
+	})
+	.state('app.detalhe-sinistro', {
+		url: '/sinistro/:sinistroId',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/detalhe-sinistro.html',
+				controller: 'SinistrosCtrl'
+			}
+		}
+	})
+	.state('app.corretores', {
+		url: '/corretores',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/corretores.html',
+				controller: 'CorretorCtrl'
+			}
+		}
+	})
+	.state('app.preferencias', {
+		url: '/preferencias',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/preferencias.html',
+				controller: 'PreferenciasCtrl'
 			}
 		}
 	})

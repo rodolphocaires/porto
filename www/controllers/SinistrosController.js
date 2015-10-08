@@ -1,4 +1,4 @@
-app.controller('SinistrosCtrl', ['$scope', 'SinistroService', '$ionicModal', function ($scope, SinistroService, $ionicModal) {
+app.controller('SinistrosCtrl', ['$scope', 'SinistroService', '$ionicModal', '$stateParams', function ($scope, SinistroService, $ionicModal, $stateParams) {
 	$scope.sinistros = SinistroService.getSinistros();
 
 	$ionicModal.fromTemplateUrl('templates/novo-sinistro.html', {
@@ -7,4 +7,15 @@ app.controller('SinistrosCtrl', ['$scope', 'SinistroService', '$ionicModal', fun
 	}).then(function (modal) {
 		$scope.novoSinistroModal = modal;
 	});
+	
+	
+	
+	
+		// Detalhes sinistro
+	var sinistroId = $stateParams.sinistroId;
+	if(sinistroId){
+		$scope.sinistro =  SinistroService.getSinistro(sinistroId);	
+	}
+	
+	
 }]);

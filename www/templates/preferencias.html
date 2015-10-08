@@ -1,0 +1,15 @@
+<ion-view view-title="Preferências">
+	<ion-content>
+		<ion-item ng-repeat="preferencia in preferencias" href="#">
+			<small>Apólice: {{preferencia.apolice}}</small>
+			<br/>
+			<small>IPVA: {{preferencia.IPVA}}</small>
+			<br/>
+			<small>Validade: {{preferencia.validade}}</small>
+			<br/>
+			<small>Rodízio (São Paulo): {{preferencia.rodizio}}</small>
+			<br/>
+			
+		</ion-item>
+	</ion-content>
+</ion-view>

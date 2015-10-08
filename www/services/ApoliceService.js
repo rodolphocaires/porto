@@ -31,10 +31,19 @@ app.factory('ApoliceService', function () {
 	};
 
 	var getApolice = function (id) {
-
+		
+		for(var i = 0; i < apolices.length; i++){
+			if(apolices[i].id == id){
+				return apolices[i];
+				break;
+			}
+		}
+		
+		
 	};
 
 	return {
-		getApolices: getApolices
+		getApolices: getApolices,
+		getApolice: getApolice
 	};
 });

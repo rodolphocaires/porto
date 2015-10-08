@@ -39,8 +39,18 @@ app.factory('SinistroService', function () {
 	var getSinistros = function () {
 		return sinistros;
 	};
+	
+	var getSinistro = function (id) {
+		for(var i = 0; i < sinistros.length; i++){
+			if(sinistros[i].id == id){
+				return sinistros[i];
+				break;
+			}
+		}
+	};
 
 	return {
-		getSinistros: getSinistros
+		getSinistros: getSinistros,
+		getSinistro: getSinistro
 	};
 });
