@@ -6,3 +6,20 @@
 #map-view .scroll {
 	height: 100%;
 }
+.button-proximo{
+	position: absolute;
+	right: 1%;
+}
+.select-condutor{
+	width: 99%;
+	margin: 4px 1px 10px 3px;
+}
+.span-condutor{
+	width: 100%;
+	max-width: 100%;
+	padding: 10px 0 5px 16px;
+}
+.modal-view{
+	overflow: 
+	
+}

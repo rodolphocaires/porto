@@ -1,11 +1,11 @@
 <ion-view view-title="Apólices">
 	<ion-content>
-		<ion-item ng-repeat="apolice in apolices" href="#/app/apolice/{{apolice.id}}">
+		<ion-item ng-repeat="apolice in apolices" href="#/app/tipo-sinistro/{{apolice.id}}">
 			<h2>Apólice {{apolice.id}}</h2>
-			<small>{{apolice.assegurado.nome}}</small>
+			<small>{{apolice.segurado.nome}}</small>
 			<br/>
-			<!-- Aqui o interessante é informar resumidamente e não todos os detalhes da apólice, deixar isto para quando o
-			usuário selecionar a apólice -->
+			<!-- Aqui o interessante Ã© informar resumidamente e nÃ£o todos os detalhes da apÃ³lice, deixar isto para quando o
+			usuÃ¡rio selecionar a apÃ³lice -->
 			<small>{{apolice.carro.marca}} {{apolice.carro.modelo}}, {{apolice.carro.cor}}, {{apolice.carro.placa}}
 			</small>
 		</ion-item>

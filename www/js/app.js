@@ -42,11 +42,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		}
 	})
 	.state('app.apolices-sinistro', {
-		url: '/apolices',
+		url: '/apolices-sinistro/:apoliceId',
 		views: {
 			'menuContent': {
 				templateUrl: 'templates/apolices-sinistro.html',
-				controller: 'ApoliceCtrl'
+				controller: 'ApoliceSinistroCtrl'
 			}
 		}
 	})
@@ -55,7 +55,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		views: {
 			'menuContent': {
 				templateUrl: 'templates/detalhe-apolice.html',
-				controller: 'ApoliceCtrl'
+				controller: 'DetalheApoliceCtrl'
 			}
 		}
 	})
@@ -73,7 +73,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		views: {
 			'menuContent': {
 				templateUrl: 'templates/detalhe-sinistro.html',
-				controller: 'SinistrosCtrl'
+				controller: 'DetalheSinistroCtrl'
+			}
+		}
+	})
+	.state('app.tipo-sinistro', {
+		url: '/tipo-sinistro/:apoliceId',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/tipo-sinistro.html',
+				controller: 'TipoSinistroCtrl'
 			}
 		}
 	})
