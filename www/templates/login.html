@@ -1,17 +1,22 @@
-<ion-modal-view>
-	<ion-content>
-		<form ng-submit="doLogin()">
-			<div class="list">
-				<ion-item class="item-floating-label">
-					<span class="input-label">Usuário</span>
-					<input type="text" placeholder="Usuário" ng-model="loginData.username">
-				</ion-item>
-				<ion-item class="item-floating-label">
-					<span class="input-label">Senha</span>
-					<input type="password" placeholder="Senha" ng-model="loginData.password">
-				</ion-item>
-				<button class="button button-block button-clear button-positive" type="submit">Log in</button>
-			</div>
-		</form>
+<ion-modal-view ng-controller="LoginCtrl">
+	<ion-content scroll="false">
+		<video autoplay loop class="login-video">
+			<!--<source src="img/car.mp4" type="video/mp4">-->
+			<source src="img/car2.mp4" type="video/mp4">
+			<!--<source src="img/car3.mp4" type="video/mp4">-->
+		</video>
+		<div class="login-wrapper">
+			<img src="img/login-logo.png">
+			<br>
+			<br>
+			<button class="button button-royal login-button item-icon-left" ng-click="doLogin()">
+				<i class="icon ion-social-facebook"></i>
+				Facebook
+			</button>
+			<br><br/>
+			<button class="button button-calm login-button" ng-click="doLogin()">Porto Seguro</button>
+			<br><br>
+			<span class="light" ng-click="doLogin()">Já possui uma conta? Acesse aqui</span>
+		</div>
 	</ion-content>
 </ion-modal-view>

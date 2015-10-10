@@ -6,20 +6,54 @@
 #map-view .scroll {
 	height: 100%;
 }
-.button-proximo{
+
+.button-proximo {
 	position: absolute;
 	right: 1%;
 }
-.select-condutor{
+
+.select-condutor {
 	width: 99%;
 	margin: 4px 1px 10px 3px;
 }
-.span-condutor{
+
+.span-condutor {
 	width: 100%;
 	max-width: 100%;
 	padding: 10px 0 5px 16px;
 }
-.modal-view{
-	overflow: 
-	
+
+.modal-view {
+	/*[ROD]: Dan comentei linha abaixo pois estava vazia */
+	/*overflow:*/
+}
+
+.no-decoration {
+	text-decoration: none;
+}
+
+.login-video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+	background-size: cover;
+	transition: 1s opacity;
+}
+
+.login-wrapper {
+	position: absolute;
+	top: 25vh;
+	text-align: center;
+	width: 100%;
+}
+
+.login-button {
+	width: 180px;
 }
