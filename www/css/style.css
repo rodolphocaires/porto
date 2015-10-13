@@ -57,3 +57,14 @@
 .login-button {
 	width: 180px;
 }
+
+.icon-corretor{
+	font-size: 1.8em;
+	position: absolute;
+	top: 30%;
+	right: 6%;
+	color: #00AEEF;
+}
+.icon-corretor:active{
+	color: #09498B;
+}
