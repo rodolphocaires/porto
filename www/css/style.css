@@ -64,7 +64,33 @@
 	top: 30%;
 	right: 6%;
 	color: #00AEEF;
+	padding: auto;
 }
 .icon-corretor:active{
 	color: #09498B;
+}
+
+.title.title-left.header-item{
+	margin:0;
+	text-align:center;
+	left: 0 !important;
+	right: 10px !important;
+}
+
+.platform-android .action-sheet .action-sheet-title{
+	color: #666;
+}
+
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button{
+		text-align: center;
+		border-color: #d1d3d6;
+		color: #007AFF;
+		font-weight: 350;
+			background: #fff;
+}
+
+.platform-android .action-sheet .action-sheet-title{
+	color: #666;
+	background: #f1f2f3;
+
 }

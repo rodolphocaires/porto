@@ -5,6 +5,7 @@ app.factory('ApoliceService', function () {
 			segurado: {
 				nome: 'Danilo Savio'
 			},
+			dataVencimento: '15/11/2015',
 			carro: {
 				marca: 'Fiat',
 				modelo: 'Uno',
@@ -18,6 +19,7 @@ app.factory('ApoliceService', function () {
 			segurado: {
 				nome: 'Rodolpho Caires'
 			},
+				dataVencimento: '15/12/2015',
 			carro: {
 				marca: 'Volkswagen',
 				modelo: 'Gol',
@@ -33,15 +35,15 @@ app.factory('ApoliceService', function () {
 	};
 
 	var getApolice = function (id) {
-		
+
 		for(var i = 0; i < apolices.length; i++){
 			if(apolices[i].id == id){
 				return apolices[i];
 				break;
 			}
 		}
-		
-		
+
+
 	};
 
 	return {

@@ -1,6 +1,6 @@
 <ion-view view-title="Preferências">
 	<ion-content>
-		<ion-item ng-repeat="preferencia in preferencias" href="#">
+		<ion-item ng-repeat="preferencia in preferencias">
 			<small>Apólice: {{preferencia.apolice}}</small>
 			<br/>
 			<small>IPVA: {{preferencia.IPVA}}</small>
@@ -9,7 +9,10 @@
 			<br/>
 			<small>Rodízio (São Paulo): {{preferencia.rodizio}}</small>
 			<br/>
-			
+			<ion-checkbox ng-model="isChecked">Ativar Alarmes</ion-checkbox>
 		</ion-item>
+		<!-- <button class="button" ng-click="exibirNotificacao()">Exibir</button>
+		<button class="button" ng-click="agendarNotificacao()">Agendar</button>
+		<h1>teste</h1> -->
 	</ion-content>
 </ion-view>

@@ -4,6 +4,7 @@ app.controller('MapCtrl', ['$scope', '$stateParams', function($scope, $statePara
 	var query = $stateParams.query;
 
 	var initialize = function() {
+		console.log('initialize');
 		var mapOptions = {
 			zoom: 16,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -12,20 +13,25 @@ app.controller('MapCtrl', ['$scope', '$stateParams', function($scope, $statePara
 		var map = new google.maps.Map(document.getElementById("map"),
 		mapOptions);
 		$scope.map = map;
-
+			console.log('after initialize');
+				console.log(map);
 
 	};
 
 	var centerOnMe = function() {
+			console.log('center on me');
 		if(!$scope.map) {
+				console.log('map = null');
 			return;
 		}
 
+		console.log('before getCurrentPosition');
 		navigator.geolocation.getCurrentPosition(function(pos) {
 			var position = {
 				lat: pos.coords.latitude,
 				lng: pos.coords.longitude
 			};
+				console.log('getCurrent');
 			$scope.map.setCenter(new google.maps.LatLng(position.lat, position.lng));
 
 			var request = {
@@ -37,10 +43,10 @@ app.controller('MapCtrl', ['$scope', '$stateParams', function($scope, $statePara
 			infoWindow = new google.maps.InfoWindow();
 			service = new google.maps.places.PlacesService($scope.map);
 			service.textSearch(request, callback);
-
+				console.log('textSearch');
 		}, function(error) {
 			alert('Unable to get location: ' + error.message);
-		});
+		},{timeout:10000});
 	};
 
 	initialize();
@@ -57,6 +63,7 @@ app.controller('MapCtrl', ['$scope', '$stateParams', function($scope, $statePara
 	}
 
 	function addMarker(place) {
+			console.log('addMarker');
 		var marker = new google.maps.Marker({
 			map: $scope.map,
 			position: place.geometry.location,

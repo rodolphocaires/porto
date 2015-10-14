@@ -15,8 +15,7 @@ app.controller('CorretorCtrl', ['$scope', 'CorretorService', '$stateParams',  '$
 
 		var buttons = [];
 		for (var i = 0; i < buttonsLabel.length; i++) {
-			buttons[i] = { text: ''};
-			buttons[i].text = buttonsLabel[i].numero;
+			buttons[i] = { text: buttonsLabel[i].numero};
 		}
 
 		// Show the action sheet
