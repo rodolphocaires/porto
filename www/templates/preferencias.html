@@ -1,15 +1,19 @@
 <ion-view view-title="Preferências">
 	<ion-content>
-		<ion-item ng-repeat="preferencia in preferencias">
-			<small>Apólice: {{preferencia.apolice}}</small>
+		<ion-item class="item-preferencias" ng-repeat="preferencia in preferencias">
+			<small class="small-a">Apólice: </small>
+			<small class="small-b"> {{preferencia.apolice}}</small>
 			<br/>
-			<small>IPVA: {{preferencia.IPVA}}</small>
+			<small class="small-a">IPVA:</small>
+			<small class="small-b">  {{preferencia.IPVA}}</small>
 			<br/>
-			<small>Validade: {{preferencia.validade}}</small>
+			<small class="small-a">Validade: </small>
+			<small class="small-b"> {{preferencia.validade}}</small>
 			<br/>
-			<small>Rodízio (São Paulo): {{preferencia.rodizio}}</small>
+			<small class="small-a">Rodízio (São Paulo): </small>
+			<small class="small-b"> {{preferencia.rodizio}}</small>
 			<br/>
-			<ion-checkbox ng-model="isChecked">Ativar Alarmes</ion-checkbox>
+			<ion-checkbox class="checkbox-preferencias" ng-model="isChecked" ng-true-value="true" ng-false-value="false" ng-change="gerenciarNotificacoes({{preferencia}}, isChecked)">Ativar Alarmes</ion-checkbox>
 		</ion-item>
 		<!-- <button class="button" ng-click="exibirNotificacao()">Exibir</button>
 		<button class="button" ng-click="agendarNotificacao()">Agendar</button>

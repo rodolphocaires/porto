@@ -92,5 +92,14 @@
 .platform-android .action-sheet .action-sheet-title{
 	color: #666;
 	background: #f1f2f3;
-
+}
+.checkbox-preferencias{
+		margin: 8px auto 5px auto;
+}
+.item-preferencias .small-a{
+	margin-top: 1px;
+}
+.item-preferencias .small-b{
+	margin-top: 1px;
+	color: #777;
 }
