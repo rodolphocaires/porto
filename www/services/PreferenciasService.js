@@ -4,7 +4,7 @@ app.factory('PreferenciasService', function () {
 
 	var preferencias = [{
 	id: 1,
-	apolice: '34313124',
+	apolice: 34313124,
 	IPVA: 'OK',
 	validade: '50 dias para vencimento da apólice.',
 	rodizio: 'Terça-feira',
@@ -12,7 +12,7 @@ app.factory('PreferenciasService', function () {
 },
 {
 	id: 2,
-	apolice: '34312125',
+	apolice: 34312125,
 	IPVA: 'OK',
 	validade: '180 dias para vencimento da apólice.',
 	rodizio: 'Quinta-feira',
@@ -22,6 +22,7 @@ app.factory('PreferenciasService', function () {
 	var getPreferencias = function () {
 		return preferencias;
 	};
+
 
 
 

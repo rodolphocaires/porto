@@ -20,7 +20,7 @@ app.factory('SinistroService', function () {
 		{
 			id: 2,
 			apolice: {
-				id: 52758991
+				id: 34312125
 			},
 			ocorrencia: {
 				id: 2,
@@ -39,7 +39,7 @@ app.factory('SinistroService', function () {
 	var getSinistros = function () {
 		return sinistros;
 	};
-	
+
 	var getSinistro = function (id) {
 		for(var i = 0; i < sinistros.length; i++){
 			if(sinistros[i].id == id){

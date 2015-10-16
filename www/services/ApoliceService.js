@@ -1,11 +1,11 @@
 app.factory('ApoliceService', function () {
 	var apolices = [
 		{
-			id: 1,
+			id: 34313124,
 			segurado: {
 				nome: 'Danilo Savio'
 			},
-			dataVencimento: '15/11/2015',
+			vencimento: '15/11/2015',
 			carro: {
 				marca: 'Fiat',
 				modelo: 'Uno',
@@ -15,11 +15,11 @@ app.factory('ApoliceService', function () {
 			tipoSinistros: [{id: 1, descricao: 'Colisão', pagina: 'colisao', icone: 'ion-model-s'},{id: 2, descricao: 'Incêndio',  pagina: 'incendio', icone: 'ion-fireball'},{id: 3, descricao: 'Roubo/Furto',  pagina: 'rouboFurto', icone: 'ion-android-walk'},{id: 4, descricao: 'Atropelamento', pagina: 'atropelamento', icone: 'ion-ios-body'},{id: 5, descricao: 'Enchente', pagina: 'enchente', icone: 'ion-ios-rainy'}, {id: 6, descricao: 'Vidros/Acessórios',  pagina: 'vidrosAcessorios',icone: 'ion-wrench'}]
 		},
 		{
-			id: 2,
+			id: 34312125,
 			segurado: {
 				nome: 'Rodolpho Caires'
 			},
-				dataVencimento: '15/12/2015',
+			vencimento: '15/12/2015',
 			carro: {
 				marca: 'Volkswagen',
 				modelo: 'Gol',
@@ -46,8 +46,21 @@ app.factory('ApoliceService', function () {
 
 	};
 
+	var getApolicePorNumero = function (apolice) {
+
+		for(var i = 0; i < apolices.length; i++){
+			if(apolices[i].id == apolice){
+				return apolices[i];
+				break;
+			}
+		}
+
+
+	};
+
 	return {
 		getApolices: getApolices,
-		getApolice: getApolice
+		getApolice: getApolice,
+		getApolicePorNumero: getApolicePorNumero
 	};
 });
