@@ -47,9 +47,14 @@
 	transition: 1s opacity;
 }
 
+.login-bg {
+	background: url('../img/road-bg.gif') no-repeat center center;
+	background-size: cover;
+}
+
 .login-wrapper {
 	position: absolute;
-	top: 25vh;
+	top: 20vh;
 	text-align: center;
 	width: 100%;
 }
@@ -102,4 +107,11 @@
 .item-preferencias .small-b{
 	margin-top: 1px;
 	color: #777;
+}
+
+.sinistro .heading {
+	display: inline-flex;
+}
+.sinistro .text {
+	margin-left: 1.2em;
 }

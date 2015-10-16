@@ -1,18 +1,17 @@
-<ion-view view-title="Sinistros">
-
+<ion-view view-title="Sinistro">
 	<ion-content>
-	
-			<small>Apólice: {{sinistro.apolice.id}}</small>
+		<ion-item class="sinistro">
+			<h2>Apólice {{sinistro.apolice.id}}</h2>
 			<br/>
-			<small>Ocorrência: {{sinistro.ocorrencia.nome}}</small>
-			<br/>
-			<small>Descritivo: {{sinistro.descritivo}}</small>
-			<br/>
-			<small>Status: {{sinistro.status.nome}}</small>
-			<br/>
-			<small>Mensagem: {{sinistro.mensagem}}</small>
-			<br/>
-			<small>Data: {{sinistro.data | date:'dd/MM/yyyy HH:mm:ss'}}</small>
-			<br/>
+			<h3 class="heading calm">Ocorrência</h3>
+			<p class="text">{{sinistro.ocorrencia.nome}}</p>
+			<h3 class="heading calm">Descritivo</h3>
+			<p class="text">{{sinistro.descritivo}}</p>
+			<h3 class="heading calm">Status</h3>
+			<p class="text">{{sinistro.status.nome}}</p>
+			<h3 class="heading calm">Mensagem</h3>
+			<p class="text">{{sinistro.mensagem}}</p>
+			<span class="badge badge-light">{{sinistro.data | date:'dd/MM/yyyy HH:mm:ss'}}</span>
+		</ion-item>
 	</ion-content>
 </ion-view>
