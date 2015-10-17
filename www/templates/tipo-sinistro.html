@@ -1,12 +1,14 @@
 <ion-view view-title="Tipo do Sinistro">
 	<ion-content>
-		<div class="tipoSinistroList" ng-repeat="tipoSinistro in apolice.tipoSinistros">
-			<div class="row">
-				<a class="col text-center" ng-click="showModalSinistro('{{tipoSinistro.pagina}}');"  href="#">
-					<h1 class="icon {{tipoSinistro.icone}}"></h1>
-					<h4>{{tipoSinistro.descricao}}</h4>
-				</a>
-			</div>
-		</div>	
+		<div class="row" ng-repeat="tipoSinistro in apolice.tipoSinistros" ng-if="$index%2===0">
+			<a class="col text-center no-decoration" ng-click="showModalSinistro('{{apolice.tipoSinistros[$index].pagina}}');" href="#">
+				<h1 class="icon {{apolice.tipoSinistros[$index].icone}}"></h1>
+				<h4>{{apolice.tipoSinistros[$index].descricao}}</h4>
+			</a>
+			<a class="col text-center no-decoration" ng-click="showModalSinistro('{{apolice.tipoSinistros[$index+1].pagina}}');" href="#">
+				<h1 class="icon {{apolice.tipoSinistros[$index+1].icone}}"></h1>
+				<h4>{{apolice.tipoSinistros[$index+1].descricao}}</h4>
+			</a>
+		</div>
 	</ion-content>
 </ion-view>
