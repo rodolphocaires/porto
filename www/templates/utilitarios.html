@@ -1,0 +1,65 @@
+<ion-view view-title="Utilitários">
+	<ion-content>
+
+				<div class="card item-pai-utilitarios">
+				  <div class="item icon ion-plus-circled item-utilitarios" ng-click="collapseGasAlcool(gasAlcool)">
+				    <h2>Álcool x Gasolina</h2>
+				  </div>
+
+				  <div class="item item-body" ng-show="gasAlcool == true">
+						<label class="item item-input">
+						 <span class="input-label">R$ da Gasolina:</span>
+						 <input name="gasolina" placeholder="0,00" type="number" ng-model="form.gasolina"></input>
+					 </label>
+					 <label class="item item-input">
+						<span class="input-label">R$ do Alcool:</span>
+						<input name="alcool" placeholder="0,00" type="number" ng-model="form.alcool"></input>
+					</label>
+					<h2 ng-show="gasolina == true" class="icon ion-thumbsup h2-alcoolGasolina"> Abasteça com Gasolina. </h2>
+					<h2 ng-show="alcool == true"   class="icon ion-thumbsup h2-alcoolGasolina"> Abasteça com Álcool. </h2>
+					<button class="button button-full  button-positive" ng-click="calcularAlcoolGasolina(form.gasolina, form.alcool)">
+					  Calcular
+					</button>
+				  </div>
+				</div>
+				<div class="card item-pai-utilitarios">
+						<div class="item icon ion-plus-circled item-utilitarios" ng-click="collapseIPVA(ipva)">
+							<h2>Tabela IPVA</h2>
+						</div>
+
+						<div class="item item-body" ng-show="ipva == true">
+								<div class="row header">
+											 <div class="col header">Placa</div>
+											 <div class="col header">Parcela 1</div>
+											 <div class="col header">Parcela 2</div>
+											 <div class="col header">Parcela 3</div>
+
+								</div>
+						  	 <div class="row body" ng-repeat="ipvaItem in ipvas">
+											 <div class="col body">{{ipvaItem.placa}}</div>
+											 <div class="col body">{{ipvaItem.vencimento1}}</div>
+											 <div class="col body">{{ipvaItem.vencimento2}}</div>
+											 <div class="col body">{{ipvaItem.vencimento3}}</div>
+
+								 </div>
+						</div>
+				</div>
+				<div class="card item-pai-utilitarios">
+
+						<div class="item icon ion-plus-circled item-utilitarios" ng-click="collapseRodizio(rodizio)">
+							<h2>Tabela Rodizio</h2>
+						</div>
+
+						<div class="item item-body" ng-show="rodizio == true">
+							<div class="row header">
+										 <div class="col header">Placa</div>
+										 <div class="col header">Dia</div>
+							</div>
+							 <div class="row body" ng-repeat="rodizioItem in rodizios">
+										 <div class="col body">{{rodizioItem.placa}}</div>
+										 <div class="col body">{{rodizioItem.dia}}</div>
+							 </div>
+						</div>
+			</div>
+	</ion-content>
+</ion-view>

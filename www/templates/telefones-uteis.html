@@ -1,0 +1,14 @@
+<ion-view view-title="Telefones Úteis">
+	<ion-content>
+		<!-- <ion-item  class="icon ion-ios-telephone" ng-repeat="telefone in telefonesUteis" ng-click="realizarChamadaTelefonica({{telefone.numero}})">
+			<h2>{{telefone.descricao}}</h2>
+		</ion-item> -->
+		<div ng-repeat="telefone in telefonesUteis">
+			<div class="card card-telefones" >
+			  <div class="item item-text-wrap icon ion-ios-telephone" ng-click="realizarChamadaTelefonica({{telefone.numero}})">
+			    {{telefone.descricao}}
+			  </div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

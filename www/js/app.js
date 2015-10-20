@@ -104,6 +104,24 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			}
 		}
 	})
+	.state('app.utilitarios', {
+		url: '/utilitarios',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/utilitarios.html',
+				controller: 'UtilitariosCtrl'
+			}
+		}
+	})
+	.state('app.telefonesUteis', {
+		url: '/telefonesUteis',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/telefones-uteis.html',
+				controller: 'TelefonesUteisCtrl'
+			}
+		}
+	})
 	.state('app.locais', {
 		url: '/locais',
 		views: {

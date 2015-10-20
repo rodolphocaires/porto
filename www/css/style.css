@@ -115,3 +115,69 @@
 .sinistro .text {
 	margin-left: 1.2em;
 }
+
+.card-telefones{
+
+}
+
+.ion-ios-telephone:before{
+	font-size: 1.4em;
+	position: absolute;
+	top: 35%;
+	right: 5%;
+	color: #00AEEF;
+	padding: auto;
+}
+
+.ion-plus-circled:before{
+	font-size: 1.8em;
+	position: absolute;
+	top: 25%;
+	right: 5%;
+	color: #00AEEF;
+	padding: auto;
+}
+.item-pai-utilitarios{
+	margin-bottom: 20px;
+}
+.row{
+		text-align: center;
+}
+.col.header{
+		margin: auto 2px auto 2px;
+		background-color: #0089BC;
+		font-size: 0.7em;
+}
+.col.body{
+	 margin: auto 2px auto 2px;
+	background-color: #fff;
+	border-bottom: 1px solid #00AEEF;
+}
+.row.header{
+		color: white;
+}
+
+.button.button-positive{
+		margin-top: 5px 5px 5px 5px;
+		background-color: #0089BC;
+		border-color: #0089BC;
+}
+
+.button.button-positive:active{
+		background-color: #00AEEF;
+}
+.button.button-positive.activated{
+		background-color: #00AEEF;
+}
+.ion-thumbsup:before{
+	text-align: center;
+	font-size: 1.8em;
+	position: absolute;
+	right: 10%;
+	bottom: 36%;
+	color: #00AEEF;
+	padding: auto;
+}
+.h2-alcoolGasolina{
+	text-align: center;
+}
