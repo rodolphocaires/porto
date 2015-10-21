@@ -12,7 +12,7 @@ app.factory('ApoliceService', function () {
 				cor: 'Prata',
 				placa: 'ABC-1234'
 			},
-			tipoSinistros: [{id: 1, descricao: 'Colisão', pagina: 'colisao', icone: 'ion-model-s'},{id: 2, descricao: 'Incêndio',  pagina: 'incendio', icone: 'ion-fireball'},{id: 3, descricao: 'Roubo/Furto',  pagina: 'rouboFurto', icone: 'ion-android-walk'},{id: 4, descricao: 'Atropelamento', pagina: 'atropelamento', icone: 'ion-ios-body'},{id: 5, descricao: 'Enchente', pagina: 'enchente', icone: 'ion-ios-rainy'}, {id: 6, descricao: 'Vidros/Acessórios',  pagina: 'vidrosAcessorios',icone: 'ion-wrench'}]
+			tipoSinistros: [{id: 1, descricao: 'Colisão', pagina: 'colisao', icone: 'icon-colisao'},{id: 2, descricao: 'Incêndio',  pagina: 'incendio', icone: 'icon-incendio'},{id: 3, descricao: 'Roubo/Furto',  pagina: 'rouboFurto', icone: 'icon-roubo'},{id: 4, descricao: 'Atropelamento', pagina: 'atropelamento', icone: 'icon-atropelamento'},{id: 5, descricao: 'Enchente', pagina: 'enchente', icone: 'icon-enchente'}, {id: 6, descricao: 'Vidros/Acessórios',  pagina: 'vidrosAcessorios',icone: 'icon-vidros'}]
 		},
 		{
 			id: 34312125,
@@ -26,7 +26,7 @@ app.factory('ApoliceService', function () {
 				cor: 'Preto',
 				placa: 'DEF-5678'
 			},
-			tipoSinistros: [{id: 1, descricao: 'Colisão', pagina: 'colisao', icone: 'ion-model-s'},{id: 3, descricao: 'Roubo/Furto', pagina: 'rouboFurto', icone: 'ion-android-walk'}]
+			tipoSinistros: [{id: 1, descricao: 'Colisão', pagina: 'colisao', icone: 'icon-colisao'},{id: 3, descricao: 'Roubo/Furto', pagina: 'rouboFurto', icone: 'icon-roubo'}]
 		}
 	];
 

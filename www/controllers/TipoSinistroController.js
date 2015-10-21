@@ -27,6 +27,65 @@ app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService
 		$scope.step = index;
 	};
 
+
+	$scope.frente = false;
+	$scope.traseira = false;
+	$scope.laterais = false;
+	$scope.teto = false;
+
+	$scope.collapseFrente = function(aberto){
+
+					if(aberto){
+							$scope.frente = false;
+					}else{
+							$scope.frente = true;
+							$scope.traseira = false;
+							$scope.laterais = false;
+							$scope.teto = false;
+					}
+	}
+
+
+		$scope.collapseTraseira = function(aberto){
+
+						if(aberto){
+								$scope.traseira = false;
+						}else{
+								$scope.traseira = true;
+								$scope.frente = false;
+								$scope.laterais = false;
+								$scope.teto = false;
+						}
+		}
+
+
+			$scope.collapseLaterais = function(aberto){
+
+							if(aberto){
+									$scope.laterais = false;
+							}else{
+									$scope.laterais = true;
+									$scope.frente = false;
+									$scope.traseira = false;
+									$scope.teto = false;
+							}
+			}
+
+
+				$scope.collapseTeto = function(aberto){
+
+								if(aberto){
+										$scope.teto = false;
+								}else{
+										$scope.teto = true;
+										$scope.frente = false;
+										$scope.traseira = false;
+										$scope.laterais = false;
+								}
+				}
+
+
+
 	var apoliceId = $stateParams.apoliceId;
 	if (apoliceId) {
 		$scope.apolice = ApoliceService.getApolice(apoliceId);

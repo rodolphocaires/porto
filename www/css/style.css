@@ -181,3 +181,47 @@
 .h2-alcoolGasolina{
 	text-align: center;
 }
+
+.checkbox-frente{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.bar .title.title-left{
+	text-align: center;
+	font-weight: 500;
+}
+
+.icon-colisao{
+		content: url("../img/colisao.png");
+		width: 1.5em;
+		margin: 0	auto 0 auto;
+}
+.icon-incendio{
+		content: url("../img/incendio.png");
+		width:  1.5em;
+		margin: 0	auto 0 auto;
+}
+.icon-roubo{
+		content: url("../img/roubo.png");
+		width: 1.5em;
+		margin: 0	auto 0 auto;
+}
+.icon-atropelamento{
+		content: url("../img/atropelamento.png");
+		width: 1.5em;
+		margin: 0	auto 0 auto;
+}
+.icon-enchente{
+		content: url("../img/enchente.png");
+		width: 1.5em;
+		margin: 0	auto 0 auto;
+}
+.icon-vidros{
+		content: url("../img/vidro_quebrado.png");
+		width: 1.5em;
+		margin: 0	auto 0 auto;
+}
+.row.row-tipo-sinistro{
+		margin-top: 20px;
+}

@@ -58,6 +58,79 @@
 					</div>
 				</ion-list>
 			</ion-slide>
+			<ion-slide>
+				<div class="card">
+					<div class="item icon ion-plus-circled item-utilitarios" ng-click="collapseFrente(frente)">
+						<h2>Frente</h2>
+					</div>
+					<div class="item item-body item-frente" ng-show="frente == true">
+						<ion-checkbox class="checkbox-partes" ng-model="parachoqueF">Parachoque</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="parabrisa">Parabrisa</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="capo">Capô</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="farolNeblinaEsquerdo">Farol de neblina esquerdo</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="farolNeblinaDireito">Farol de neblina direito</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="farolMilhaEsquerdo">Farol de milha esquerdo</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="farolMilhaDireito">Farol de milha direito</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="piscaAlertaEsquerdoF">Pisca-alerta esquerdo</ion-checkbox>
+						<ion-checkbox class="checkbox-partes" ng-model="piscaAlertaDireitoF">Pisca-alerta direito</ion-checkbox>
+					</div>
+				</div>
+				<div class="card">
+						<div class="item icon ion-plus-circled item-utilitarios" ng-click="collapseTraseira(traseira)">
+							<h2>Traseira</h2>
+						</div>
+						<div class="item item-body" ng-show="traseira == true">
+								<ion-checkbox class="checkbox-partes" ng-model="parachoqueT">Parachoque</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="vidro">Vidro</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="piscaAlertaEsquerdoT">Pisca-alerta esquerdo</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="piscaAlertaDireitoT">Pisca-alerta direito</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="olhoGatoEsquerdo">Olho-de-gato esquerdo</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="olhoGatoDireito">Olho-de-gato direito</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="brakeLight">Brake Light</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="Tampa">tampa</ion-checkbox>
+						</div>
+				</div>
+				<div class="card">
+							<div class="item icon ion-plus-circled item-utilitarios" ng-click="collapseLaterais(laterais)">
+								<h2>Laterais</h2>
+							</div>
+							<div class="item item-body" ng-show="laterais == true">
+									<ion-checkbox class="checkbox-partes" ng-model="retrovisorEsquerdo">Retrovisor esquerdo</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="retrovisorDireito">Retrovisor direito</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="portaTraseiraEsquerda">Porta traseira esquerda</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="portaTraseiraDireita">Porta traseira direita</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="portaDianteiraEsquerda">Porta dianteira esquerda</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="portaDianteiraDireita">Porta dianteira direita</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="lateralEsquerda">Lateral esquerda</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="lateralDireita">Lateral direita</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="retrovisorEsquerdo">Retrovisor esquerdo</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="retrovisorDireito">Retrovisor direito</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="vidroDianteiroEsquerdo">Vidro dianteiro esquerdo</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="vidroDianteiroDireito">Vidro dianteiro direito</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="vidroTraseiroEsquerdo">Vidro traseiro esquerdo</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="vidroTraseiroDireito">Vidro traseiro direito</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="paralamaEsquerdo">Paralama esquerdo</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="paralamaDireito">Paralama direito</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="rodaTraseiraEsquerda">Roda traseira esquerda</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="rodaTraseiraDireita">Roda traseira direita</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="rodaDianteiraEsquerda">Roda dianteira direita</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="rodaDianteiraDireita">Roda dianteira direita</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="oculoDianteiroEsquerdo">Óculo dianteiro esquerdo</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="oculoDianteiroDireito">Óculo dianteiro direito</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="oculoTraseiroEsquerdo">Óculo traseiro esquerdo</ion-checkbox>
+									<ion-checkbox class="checkbox-partes" ng-model="oculoTraseiroDireito">Óculo traseiro direito</ion-checkbox>
+							</div>
+				</div>
+				<div class="card">
+							<div class="item icon ion-plus-circled item-utilitarios" ng-click="collapseTeto(teto)">
+								<h2>Teto</h2>
+							</div>
+							<div class="item item-body" ng-show="teto == true">
+								<ion-checkbox class="checkbox-partes" ng-model="teto">Teto</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="tetoSolar">Teto solar</ion-checkbox>
+							</div>
+				</div>
+	  	</ion-slide>
 		</ion-slide-box>
 	</ion-content>
 </ion-modal-view>
