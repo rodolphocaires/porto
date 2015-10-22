@@ -225,3 +225,9 @@
 .row.row-tipo-sinistro{
 		margin-top: 20px;
 }
+.login-popup .popup-head {
+	display: none;
+}
+.login-popup .item-input {
+	padding: 6px;
+}

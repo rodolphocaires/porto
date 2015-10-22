@@ -1,0 +1,22 @@
+<ion-list class="list-borderless">
+	<label class="item item-input item-stacked-label">
+		<span class="input-label">Usuário</span>
+		<input placeholder="Usuário" required="true" type="text"/>
+	</label>
+	<ion-item class="item item-input item-stacked-label">
+		<span class="input-label">Senha</span>
+		<input placeholder="Senha" required="true" type="password"/>
+	</ion-item>
+	<div class="row">
+		<div class="col">
+			<ion-item class="text-center" ng-click="cancelLogin()">
+				<h2 class="nubank">Cancelar</h2>
+			</ion-item>
+		</div>
+		<div class="col">
+			<ion-item class="text-center" ng-click="authenticate()">
+				<h2 class="nubank">Entrar</h2>
+			</ion-item>
+		</div>
+	</div>
+</ion-list>
