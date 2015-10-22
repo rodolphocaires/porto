@@ -1,5 +1,31 @@
-app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService', '$ionicModal', '$stateParams', '$ionicSlideBoxDelegate', function ($scope, SinistroService, ApoliceService, $ionicModal, $stateParams, $ionicSlideBoxDelegate) {
+app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService', '$ionicModal', '$stateParams', '$ionicSlideBoxDelegate', '$ionicPopup','$state', function ($scope, SinistroService, ApoliceService, $ionicModal, $stateParams, $ionicSlideBoxDelegate, $ionicPopup, $state) {
 	$scope.step = 0;
+	var confirmacaoPopup = null
+
+	var apoliceId = $stateParams.apoliceId;
+	if (apoliceId) {
+		$scope.apolice = ApoliceService.getApolice(apoliceId);
+	}
+
+	$scope.sinistro = {
+			id: 3,
+			apolice: {
+				id: apoliceId
+			},
+			ocorrencia: {
+				id: 1,
+				nome: 'Colisão'
+			},
+			descritivo: '',
+			status: {
+				id: 1,
+				nome: 'Aguardando Aprovação'
+			},
+			mensagem: 'Enviado - Aguardando Análise',
+			data: new Date(),
+			condutor: '',
+			local: ''
+		}
 
 	$scope.showModalSinistro = function (pagina) {
 		$ionicModal.fromTemplateUrl('templates/form-' + pagina + '.html', {
@@ -85,10 +111,31 @@ app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService
 				}
 
 
+				$scope.enviar = function(sinistro){
+					console.log('Enviar');
+					console.log($scope.sinistro);
+					confirmacaoPopup.close();
+					$scope.novoSinistroModal.hide();
+					$scope.sinistro.apolice.id = apoliceId;
+					SinistroService.addSinistro($scope.sinistro);
+					$state.go('app.sinistros', { clearHistory: true });
+				}
 
-	var apoliceId = $stateParams.apoliceId;
-	if (apoliceId) {
-		$scope.apolice = ApoliceService.getApolice(apoliceId);
-	}
+
+
+				$scope.showConfirmacaoPopup = function () {
+					confirmacaoPopup = $ionicPopup.show({
+						templateUrl: 'templates/confirmacao-popup.html',
+						cssClass: 'confirmacao-popup',
+						scope: $scope
+					});
+				};
+
+				$scope.cancelConfirmacao = function () {
+					confirmacaoPopup.close();
+				};
+
+
+
 
 }]);

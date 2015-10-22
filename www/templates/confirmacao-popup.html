@@ -1,0 +1,35 @@
+<ion-list class="list-borderless">
+	<h4>Confirme os dados para envio</h4>
+	<ion-item class="item item-input item-stacked-label">
+		<h2 class="heading calm">Ocorrência:</h2>
+		<p class="text">{{sinistro.ocorrencia.nome}}</p>
+	</ion-item>
+	<ion-item class="item item-input item-stacked-label">
+		<h2 class="heading calm">Data:</h2>
+		<p class="text">{{sinistro.data | date:'dd/MM/yyyy'}}</p>
+	</ion-item>
+	<ion-item class="item item-input item-stacked-label">
+		<h2 class="heading calm">Condutor:</h2>
+		<p class="text">{{sinistro.condutor}}</p>
+	</ion-item>
+	<ion-item class="item item-input item-stacked-label">
+		<h2 class="heading calm">Local:</h2>
+		<p class="text">{{sinistro.local}}</p>
+	</ion-item>
+	<ion-item class="item item-input item-stacked-label">
+		<h2 class="heading calm">Descritivo:</h2>
+		<p class="text">{{sinistro.descritivo}}</p>
+	</ion-item>
+	<div class="row">
+		<div class="col">
+			<ion-item class="text-center" ng-click="cancelConfirmacao()">
+				<h2 class="nubank">Cancelar</h2>
+			</ion-item>
+		</div>
+		<div class="col">
+			<ion-item class="text-center" ng-click="enviar()">
+				<h2 class="nubank">Enviar</h2>
+			</ion-item>
+		</div>
+	</div>
+</ion-list>

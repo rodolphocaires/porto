@@ -1,4 +1,4 @@
-app.controller('LoginCtrl', ['$scope', '$ionicPopup', '$timeout', function ($scope, $ionicPopup, $timeout) {
+app.controller('LoginCtrl', ['$scope', '$ionicPopup', '$timeout', '$ionicLoading', function ($scope, $ionicPopup, $timeout, $ionicLoading) {
 	var loginPopup = null;
 
 	$scope.loginPorto = function () {
@@ -17,6 +17,19 @@ app.controller('LoginCtrl', ['$scope', '$ionicPopup', '$timeout', function ($sco
 		loginPopup.close();
 		$timeout(function () {
 			$scope.closeLogin();
+			$scope.show();
 		}, 500);
 	};
+
+	$scope.show = function() {
+		 $ionicLoading.show({
+			 template: 'Sincronizando dados...',
+			 duration: 5000
+		 });
+	 };
+	 $scope.hide = function(){
+		 $ionicLoading.hide();
+	 };
+
+
 }]);
