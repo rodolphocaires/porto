@@ -15,7 +15,9 @@ app.factory('SinistroService', function () {
 				nome: 'Aguardando Aprovação'
 			},
 			mensagem: 'Em processo de análise detalhada da ocorrência',
-			data: new Date()
+			data: new Date(),
+			condutor: 'Danilo Savio',
+			local: 'Domingos de Morais, 502'
 		},
 		{
 			id: 2,
@@ -32,7 +34,9 @@ app.factory('SinistroService', function () {
 				nome: 'Recusado'
 			},
 			mensagem: 'Boletim de ocorrência não foi informado',
-			data: new Date()
+			data: new Date(),
+			condutor: 'Rodolpho Caires',
+			local: 'Av. Paulista , 2000'
 		}
 	];
 
@@ -49,8 +53,14 @@ app.factory('SinistroService', function () {
 		}
 	};
 
+	var addSinistro = function (sinistro) {
+		sinistros.push(sinistro);
+		return true;
+	};
+
 	return {
 		getSinistros: getSinistros,
-		getSinistro: getSinistro
+		getSinistro: getSinistro,
+		addSinistro: addSinistro
 	};
 });

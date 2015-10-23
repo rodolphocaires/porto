@@ -225,3 +225,13 @@
 .login-popup .item-input {
 	padding: 6px;
 }
+.confirmacao-popup .popup-head{
+	 padding:0;
+}
+.confirmacao-popup h4{
+	 margin: 1px 10px 5px 10px;
+	 font-weight: 500;
+	 color: #666;
+	 border-bottom: 1px solid #aaa;
+	 padding-bottom: 5px;
+}

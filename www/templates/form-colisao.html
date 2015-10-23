@@ -4,7 +4,7 @@
 		<button class="button button-clear button-positive" ng-click="previous()" ng-show="step > 0">Voltar</button>
 		<h1 class="title">Colisão</h1>
 		<button class="button button-clear button-positive button-proximo" ng-click="next();" ng-show="step < 2">Próximo</button>
-		<button class="button button-clear button-positive button-proximo" ng-click="hideModal();" ng-show="step === 2">Enviar</button>
+		<button class="button button-clear button-positive button-proximo" ng-click="showConfirmacaoPopup();" ng-show="step === 2">Enviar</button>
 	</ion-header-bar>
 	<ion-content>
 		<ion-slide-box show-pager="false" active-slide="step" on-slide-changed="stepChanged($index)">
@@ -12,22 +12,22 @@
 				<ion-list>
 					<label class="item item-input">
 						<span class="input-label">Data:</span>
-						<input name="dataOcorrencia" placeholder="20/10/2015" required="true" type="date"/>
+						<input name="dataOcorrencia" ng-model="sinistro.data" placeholder="20/10/2015" required="true" type="date"/>
 					</label>
 					<label class="item">
 						<span class="input-label span-condutor">Condutor no momento da colisão</span>
-						<ion-radio type="radio" name="radioForm1" value="1" selected>Segurado</ion-radio>
-						<ion-radio type="radio" name="radioForm1" value="2">Dependente</ion-radio>
-						<ion-radio type="radio" name="radioForm1" value="3">Terceiro</ion-radio>
+						<ion-radio type="radio" name="radioForm1" ng-model="sinistro.condutor"  value="Segurado" selected>Segurado</ion-radio>
+						<ion-radio type="radio" name="radioForm1" ng-model="sinistro.condutor"  value="Dependente">Dependente</ion-radio>
+						<ion-radio type="radio" name="radioForm1" ng-model="sinistro.condutor"  value="Terceiro">Terceiro</ion-radio>
 					</label>
 					<label class="item item-input item-stacked-label">
 						<span class="input-label">Descritivo da Ocorrência:</span>
-						<input name="descricaoOcorrencia" placeholder="Informe o descritivo da ocorrência" type="text"></input>
+						<input name="descricaoOcorrencia" ng-model="sinistro.descritivo" placeholder="Informe o descritivo da ocorrência" type="text"></input>
 					</label>
 					<label class="item">
 						<span class="input-label span-condutor">Você se considera responsável? </span>
-						<ion-radio type="radio" name="radioForm2" value="1">Sim</ion-radio>
-						<ion-radio type="radio" name="radioForm2" value="2">Não</ion-radio>
+						<ion-radio type="radio" ng-model="sinistro.responsavel" name="radioForm2" value="1">Sim</ion-radio>
+						<ion-radio type="radio" ng-model="sinistro.responsavel" name="radioForm2" value="2">Não</ion-radio>
 					</label>
 				</ion-list>
 			</ion-slide>
@@ -35,26 +35,26 @@
 				<ion-list>
 					<label class="item item-input item-stacked-label">
 						<span class="input-label">Local da Ocorrência:</span>
-						<input name="localOcorrencia" placeholder="Av Guapira, 664 - Tucuruvi, SP" type="text">
+						<input name="localOcorrencia" ng-model="sinistro.local" placeholder="Av Guapira, 664 - Tucuruvi, SP" type="text">
 					</label>
 					<span class="input-label span-condutor">Boletim de ocorrência foi registrado? </span>
 					<ion-radio type="radio" name="radioAForm2" value="1" ng-click="boletim = true">Sim</ion-radio>
 					<ion-radio type="radio" name="radioAForm2" value="2" ng-click="boletim = false">Não</ion-radio>
 					<label class="item item-input" ng-show="boletim == true">
 						<span class="input-label">Número:</span>
-						<input name="boOcorrencia" placeholder="371102013" type="text"/>
+						<input name="boOcorrencia" ng-model="sinistro.bo" placeholder="371102013" type="text"/>
 					</label>
 					<span class="input-label span-condutor">Alguém se machucou? </span>
-					<ion-radio type="radio" name="radioBForm2" value="1" ng-click="machucou = true">Sim</ion-radio>
-					<ion-radio type="radio" name="radioBForm2" value="2" ng-click="machucou = false" checked>Não</ion-radio>
+					<ion-radio type="radio" name="radioBForm2"  ng-model="sinistro.machucou" value="1" ng-click="machucou = true">Sim</ion-radio>
+					<ion-radio type="radio" name="radioBForm2"  ng-model="sinistro.machucou" value="2" ng-click="machucou = false" checked>Não</ion-radio>
 
 					<div ng-show="machucou == true">
 						<span class="input-label span-condutor">Gravidade do acidente: </span>
-						<ion-radio type="radio" name="radioCForm2" value="1" ng-click="boletim = true">Sim</ion-radio>
-						<ion-radio type="radio" name="radioCForm2" value="2" ng-click="boletim = false">Não</ion-radio>
+						<ion-radio type="radio" name="radioCForm2" ng-model="sinistro.gravidade" value="1" ng-click="boletim = true">Sim</ion-radio>
+						<ion-radio type="radio" name="radioCForm2" ng-model="sinistro.gravidade" value="2" ng-click="boletim = false">Não</ion-radio>
 						<span class="input-label span-condutor">Internação ou resgate? </span>
-						<ion-radio type="radio" name="radioDForm2" value="1" ng-click="boletim = true">Sim</ion-radio>
-						<ion-radio type="radio" name="radioDForm2" value="2" ng-click="boletim = false">Não</ion-radio>
+						<ion-radio type="radio" name="radioDForm2" ng-model="sinistro.internacaoResgate" value="1" ng-click="boletim = true">Sim</ion-radio>
+						<ion-radio type="radio" name="radioDForm2" ng-model="sinistro.internacaoResgate"  value="2" ng-click="boletim = false">Não</ion-radio>
 					</div>
 				</ion-list>
 			</ion-slide>
@@ -126,7 +126,7 @@
 								<h2>Teto</h2>
 							</div>
 							<div class="item item-body" ng-show="teto == true">
-								<ion-checkbox class="checkbox-partes" ng-model="teto">Teto</ion-checkbox>
+								<ion-checkbox class="checkbox-partes" ng-model="tetoC">Teto</ion-checkbox>
 								<ion-checkbox class="checkbox-partes" ng-model="tetoSolar">Teto solar</ion-checkbox>
 							</div>
 				</div>
