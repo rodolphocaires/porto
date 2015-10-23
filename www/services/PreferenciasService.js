@@ -7,8 +7,8 @@ app.factory('PreferenciasService', function () {
 	apolice: 34313124,
 	IPVA: 'OK',
 	validade: '50 dias para vencimento da apólice.',
-	rodizio: 'Terça-feira',
-	rodizioId: 2
+	rodizio: 'Sexta-feira',
+	rodizioId: 5
 },
 {
 	id: 2,

@@ -48,7 +48,7 @@
 
 .login-wrapper {
 	position: absolute;
-	top: 20vh;
+	top: 10vh;
 	text-align: center;
 	width: 100%;
 }
@@ -234,4 +234,19 @@
 	 color: #666;
 	 border-bottom: 1px solid #aaa;
 	 padding-bottom: 5px;
+}
+
+.item-royal.text-center.menu-logo{
+		padding-top: 2px;
+		padding-left: 0;
+		padding-bottom: 5px;
+}
+.partes-carro-titulo{
+	margin: 10px 10px 1px 10px;
+	font-weight: 500;
+	color: #666;
+	padding-bottom: 1px;
+}
+.card.card-frente{
+		margin-top: 10px;
 }

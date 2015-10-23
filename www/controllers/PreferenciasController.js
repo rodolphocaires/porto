@@ -7,9 +7,9 @@ app.controller('PreferenciasCtrl', ['$scope', 'PreferenciasService', '$statePara
 				console.log(preferencia, isChecked);
 				if(isChecked){
 
-					var vencimento = getVencimento(preferencia.apolice);
-
-					alertarVencimentoApolice(preferencia.apolice, vencimento);
+					// var vencimento = getVencimento(preferencia.apolice);
+					//
+					// alertarVencimentoApolice(preferencia.apolice, vencimento);
 
 					alertarRodizio(preferencia.apolice, preferencia.rodizioId);
 				}else{

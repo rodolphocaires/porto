@@ -24,7 +24,7 @@ app.controller('LoginCtrl', ['$scope', '$ionicPopup', '$timeout', '$ionicLoading
 	$scope.show = function() {
 		 $ionicLoading.show({
 			 template: 'Sincronizando dados...',
-			 duration: 5000
+			 duration: 3000
 		 });
 	 };
 	 $scope.hide = function(){
