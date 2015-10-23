@@ -1,10 +1,10 @@
 <ion-modal-view>
 	<ion-header-bar>
-		<button class="button button-clear button-positive" ng-click="novoSinistroModal.hide()" ng-show="step === 0">Cancelar</button>
+		<button class="button button-clear button-positive" ng-click="hideModal()" ng-show="step === 0">Cancelar</button>
 		<button class="button button-clear button-positive" ng-click="previous()" ng-show="step > 0">Voltar</button>
 		<h1 class="title">Colisão</h1>
 		<button class="button button-clear button-positive button-proximo" ng-click="next();" ng-show="step < 2">Próximo</button>
-		<button class="button button-clear button-positive button-proximo" ng-click="novoSinistroModal.hide();" ng-show="step === 2">Enviar</button>
+		<button class="button button-clear button-positive button-proximo" ng-click="hideModal();" ng-show="step === 2">Enviar</button>
 	</ion-header-bar>
 	<ion-content>
 		<ion-slide-box show-pager="false" active-slide="step" on-slide-changed="stepChanged($index)">

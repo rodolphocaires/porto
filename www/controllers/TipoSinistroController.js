@@ -1,4 +1,4 @@
-app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService', '$ionicModal', '$stateParams', '$ionicSlideBoxDelegate', function ($scope, SinistroService, ApoliceService, $ionicModal, $stateParams, $ionicSlideBoxDelegate) {
+app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService', '$ionicModal', '$stateParams', '$ionicSlideBoxDelegate', '$state', '$ionicHistory', function ($scope, SinistroService, ApoliceService, $ionicModal, $stateParams, $ionicSlideBoxDelegate, $state, $ionicHistory) {
 	$scope.step = 0;
 
 	$scope.showModalSinistro = function (pagina) {
@@ -15,6 +15,16 @@ app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService
 		$scope.novoSinistroModal.show();
 	};
 
+	$scope.hideModal = function () {
+		$scope.novoSinistroModal.hide();
+
+		$ionicHistory.nextViewOptions({
+			disableBack: true
+		});
+
+		$state.go('app.sinistros');
+	};
+
 	$scope.next = function () {
 		$ionicSlideBoxDelegate.next();
 	};
@@ -27,64 +37,58 @@ app.controller('TipoSinistroCtrl', ['$scope', 'SinistroService', 'ApoliceService
 		$scope.step = index;
 	};
 
-
 	$scope.frente = false;
 	$scope.traseira = false;
 	$scope.laterais = false;
 	$scope.teto = false;
 
-	$scope.collapseFrente = function(aberto){
+	$scope.collapseFrente = function (aberto) {
 
-					if(aberto){
-							$scope.frente = false;
-					}else{
-							$scope.frente = true;
-							$scope.traseira = false;
-							$scope.laterais = false;
-							$scope.teto = false;
-					}
-	}
-
-
-		$scope.collapseTraseira = function(aberto){
-
-						if(aberto){
-								$scope.traseira = false;
-						}else{
-								$scope.traseira = true;
-								$scope.frente = false;
-								$scope.laterais = false;
-								$scope.teto = false;
-						}
+		if (aberto) {
+			$scope.frente = false;
+		} else {
+			$scope.frente = true;
+			$scope.traseira = false;
+			$scope.laterais = false;
+			$scope.teto = false;
 		}
+	};
 
+	$scope.collapseTraseira = function (aberto) {
 
-			$scope.collapseLaterais = function(aberto){
+		if (aberto) {
+			$scope.traseira = false;
+		} else {
+			$scope.traseira = true;
+			$scope.frente = false;
+			$scope.laterais = false;
+			$scope.teto = false;
+		}
+	};
 
-							if(aberto){
-									$scope.laterais = false;
-							}else{
-									$scope.laterais = true;
-									$scope.frente = false;
-									$scope.traseira = false;
-									$scope.teto = false;
-							}
-			}
+	$scope.collapseLaterais = function (aberto) {
 
+		if (aberto) {
+			$scope.laterais = false;
+		} else {
+			$scope.laterais = true;
+			$scope.frente = false;
+			$scope.traseira = false;
+			$scope.teto = false;
+		}
+	};
 
-				$scope.collapseTeto = function(aberto){
+	$scope.collapseTeto = function (aberto) {
 
-								if(aberto){
-										$scope.teto = false;
-								}else{
-										$scope.teto = true;
-										$scope.frente = false;
-										$scope.traseira = false;
-										$scope.laterais = false;
-								}
-				}
-
-
+		if (aberto) {
+			$scope.teto = false;
+		} else {
+			$scope.teto = true;
+			$scope.frente = false;
+			$scope.traseira = false;
+			$scope.laterais = false;
+		}
+	};
 
 	var apoliceId = $stateParams.apoliceId;
 	if (apoliceId) {
